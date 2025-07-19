@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { db } from '../firebase/config';
 import { doc, getDoc } from 'firebase/firestore';
+import PageContainer from '../components/PageContainer';
 
 const RecipeDetailPage = () => {
   const { id } = useParams();
@@ -43,7 +44,7 @@ const RecipeDetailPage = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#fdf7f4] py-10 px-4 sm:px-8">
+      <PageContainer>
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-xl p-8 animate-pulse">
             <div className="h-64 bg-gray-200 rounded-lg mb-6"></div>
@@ -56,13 +57,13 @@ const RecipeDetailPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </PageContainer>
     );
   }
 
   if (error || !recipe) {
     return (
-      <div className="min-h-screen bg-[#fdf7f4] py-10 px-4 sm:px-8">
+      <PageContainer>
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white rounded-xl p-8">
             <div className="text-6xl mb-4">🍳</div>
@@ -76,12 +77,12 @@ const RecipeDetailPage = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </PageContainer>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#fdf7f4] py-10 px-4 sm:px-8">
+    <PageContainer>
       <div className="max-w-4xl mx-auto">
         {/* Back Button */}
         <div className="mb-6">
@@ -159,7 +160,7 @@ const RecipeDetailPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

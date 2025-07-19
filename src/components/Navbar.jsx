@@ -41,17 +41,6 @@ const Navbar = () => {
             {user && <li><Link to="/dashboard" className="hover:underline">Dashboard</Link></li>}
           </ul>
           <div className="flex items-center gap-4">
-            <button
-              onClick={toggleTheme}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full ${theme === 'dark'
-                  ? 'bg-gray-700 text-gray-200'
-                  : 'bg-gray-200 text-gray-800'
-                } transition-all duration-200`}
-              style={{ minWidth: '90px' }}
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? '🌙 Dark' : '☀️ Light'}
-            </button>
             {user ? (
               <>
                 <button
@@ -62,7 +51,7 @@ const Navbar = () => {
                   Logout
                 </button>
                 <Link to="/profile" className="ml-2">
-                  <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-xl font-bold text-gray-500 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:shadow-md transition">
+                  <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-xl font-bold text-gray-500 border border-gray-300 hover:shadow-md transition">
                     {user.displayName ? user.displayName[0].toUpperCase() : <span role="img" aria-label="profile">👤</span>}
                   </div>
                 </Link>
@@ -95,16 +84,6 @@ const Navbar = () => {
             <li><Link to="/recipes" onClick={closeMenu} className="hover:underline">Recipes</Link></li>
             {user && <li><Link to="/dashboard" onClick={closeMenu} className="hover:underline">Dashboard</Link></li>}
             <li>
-              <button
-                onClick={() => { toggleTheme(); closeMenu(); }}
-                className="px-4 py-2 rounded-full border-none bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
-                style={{ minWidth: '90px' }}
-                aria-label="Toggle theme"
-              >
-                {theme === 'dark' ? '🌙 Dark' : '☀️ Light'}
-              </button>
-            </li>
-            <li>
               {user ? (
                 <>
                   <button
@@ -115,7 +94,7 @@ const Navbar = () => {
                     Logout
                   </button>
                   <Link to="/profile" onClick={closeMenu}>
-                    <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-xl font-bold text-gray-500 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:shadow-md transition">
+                    <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-xl font-bold text-gray-500 border border-gray-300 hover:shadow-md transition">
                       {user.displayName ? user.displayName[0].toUpperCase() : <span role="img" aria-label="profile">👤</span>}
                     </div>
                   </Link>

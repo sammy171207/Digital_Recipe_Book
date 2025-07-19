@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import RecipeSuggestions from '../components/RecipeSuggestions';
 import IngredientRecipeGenerator from '../components/IngredientRecipeGenerator';
 import { FaSave, FaUndo, FaLightbulb, FaExclamationTriangle, FaBrain, FaMagic, FaClock } from 'react-icons/fa';
+import PageContainer from '../components/PageContainer';
 
 const categories = [
   'Breakfast',
@@ -181,7 +182,7 @@ const AddRecipePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fdf7f4] py-10 px-4 sm:px-8">
+    <PageContainer>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Form */}
@@ -191,7 +192,7 @@ const AddRecipePage = () => {
                 <div className="flex items-center space-x-3">
                   <h1 className="text-3xl font-bold text-gray-800">New Recipe</h1>
                   {aiGeneratedInfo && (
-                    <span className="flex items-center space-x-1 bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="flex items-center space-x-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
                       <FaBrain className="h-4 w-4" />
                       <span>AI Generated</span>
                     </span>
@@ -214,17 +215,17 @@ const AddRecipePage = () => {
 
               {/* AI Generated Info */}
               {aiGeneratedInfo && (
-                <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                <div className="mb-6 p-4 bg-purple-50 border border-purple-200 rounded-lg">
                   <div className="flex items-center space-x-2 mb-2">
-                    <FaBrain className="h-4 w-4 text-orange-600" />
-                    <span className="font-medium text-orange-800">AI Generated Recipe</span>
+                    <FaBrain className="h-4 w-4 text-purple-600" />
+                    <span className="font-medium text-purple-800">AI Generated Recipe</span>
                   </div>
                   {aiGeneratedInfo.reasoning && (
-                    <p className="text-sm text-orange-700 mb-2">
+                    <p className="text-sm text-purple-700 mb-2">
                       💡 {aiGeneratedInfo.reasoning}
                     </p>
                   )}
-                  <div className="flex items-center space-x-4 text-sm text-orange-600">
+                  <div className="flex items-center space-x-4 text-sm text-purple-600">
                     {aiGeneratedInfo.cookingTime && (
                       <div className="flex items-center space-x-1">
                         <FaClock className="h-3 w-3" />
@@ -425,7 +426,7 @@ const AddRecipePage = () => {
                 <div className="mb-4">
                   <button
                     onClick={() => setShowSuggestions(!showSuggestions)}
-                    className="w-full flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-lg font-medium transition"
+                    className="w-full flex items-center justify-center space-x-2 bg-purple-500 hover:bg-purple-600 text-white px-4 py-3 rounded-lg font-medium transition"
                   >
                     <FaBrain className="h-5 w-5" />
                     <span>{showSuggestions ? 'Hide' : 'Show'} AI Suggestions</span>
@@ -438,7 +439,7 @@ const AddRecipePage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

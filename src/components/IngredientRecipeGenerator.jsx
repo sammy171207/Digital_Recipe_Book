@@ -184,7 +184,7 @@ const IngredientRecipeGenerator = () => {
                   </div>
                 )}
                 {generatedRecipe.difficulty && (
-                  <div className={`flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(generatedRecipe.difficulty)}`}>
+                  <div className={`flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800`}>
                     <span>{getDifficultyIcon(generatedRecipe.difficulty)}</span>
                     <span>{generatedRecipe.difficulty}</span>
                   </div>

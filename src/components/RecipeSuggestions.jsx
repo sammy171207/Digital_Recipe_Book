@@ -62,13 +62,13 @@ const RecipeSuggestions = () => {
       case 'category':
         return <FaUtensils className="text-orange-500" />;
       case 'ingredient':
-        return <FaStar className="text-orange-500" />;
+        return <FaStar className="text-yellow-500" />;
       case 'seasonal':
-        return <FaLightbulb className="text-orange-500" />;
+        return <FaLightbulb className="text-green-500" />;
       case 'basic':
-        return <FaMagic className="text-orange-500" />;
+        return <FaMagic className="text-blue-500" />;
       default:
-        return <FaLightbulb className="text-orange-500" />;
+        return <FaLightbulb className="text-blue-500" />;
     }
   };
 
@@ -197,7 +197,7 @@ const RecipeSuggestions = () => {
                   )}
                 </div>
                 
-                <p className="text-xs text-gray-500 mb-3 line-clamp-2">
+                <p className="text-xs text-gray-600 mb-3 line-clamp-2">
                   {suggestion.description}
                 </p>
                 
@@ -206,7 +206,7 @@ const RecipeSuggestions = () => {
                   <div className="space-y-2 mb-3">
                     {suggestion.reasoning && (
                       <p className="text-xs text-orange-600 bg-orange-50 p-2 rounded">
-                        �� {suggestion.reasoning}
+                        💡 {suggestion.reasoning}
                       </p>
                     )}
                     

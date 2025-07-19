@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { db } from '../firebase/config';
 import { collection, addDoc, getDocs, query, where, orderBy, serverTimestamp } from 'firebase/firestore';
+import PageContainer from '../components/PageContainer';
 
 const MealPlanPage = () => {
   const user = useSelector((state) => state.auth.user);
@@ -130,7 +131,7 @@ const MealPlanPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#fdf7f4] py-10 px-4 sm:px-8">
+    <PageContainer>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-8">Meal Planning</h1>
 
@@ -243,7 +244,7 @@ const MealPlanPage = () => {
           )}
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

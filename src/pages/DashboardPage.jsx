@@ -73,7 +73,7 @@ const DashboardPage = () => {
   }
 
   return (
-    <PageContainer maxWidth="max-w-7xl">
+    <PageContainer>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-3">

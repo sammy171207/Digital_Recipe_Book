@@ -61,13 +61,13 @@ const Home = () => {
   ];
 
   return (
-    <PageContainer background="bg-gradient-to-br from-orange-50 to-red-50">
+    <PageContainer>
       {/* Hero Section */}
-      <div className="text-center py-20">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+      <div className="text-center py-16 md:py-20 px-2 sm:px-0">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
           Your Digital Recipe Book
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
           Organize your favorite recipes, plan your meals, and discover new dishes from our community of home cooks.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -94,9 +94,9 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Everything you need to organize your kitchen</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="py-12 md:py-16 px-2 sm:px-0">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-800">Everything you need to organize your kitchen</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="text-center hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">{feature.icon}</div>
@@ -108,9 +108,9 @@ const Home = () => {
       </div>
 
       {/* How it Works Section */}
-      <div className="py-16 bg-white rounded-2xl my-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">How it works</h2>
+      <div className="py-12 md:py-16 bg-white rounded-2xl my-10 md:my-16 px-2 sm:px-0">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">How it works</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Get started in just a few simple steps
           </p>
@@ -120,29 +120,29 @@ const Home = () => {
             <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-orange-600">1</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Create Account</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-800">Create Account</h3>
             <p className="text-gray-600">Sign up for free and start building your recipe collection</p>
           </div>
           <div className="text-center">
             <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-orange-600">2</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Add Recipes</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-800">Add Recipes</h3>
             <p className="text-gray-600">Upload your favorite recipes with photos and detailed instructions</p>
           </div>
           <div className="text-center">
             <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold text-orange-600">3</span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Plan & Cook</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-800">Plan & Cook</h3>
             <p className="text-gray-600">Plan your meals, generate shopping lists, and enjoy cooking</p>
           </div>
         </div>
       </div>
 
       {/* Testimonials Section */}
-      <div className="py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">What our users say</h2>
+      <div className="py-12 md:py-16 px-2 sm:px-0">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12 dark:text-white">What our users say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="text-center">
@@ -158,10 +158,10 @@ const Home = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="py-16 text-center">
-        <Card className="bg-gradient-to-r from-orange-500 to-red-500 text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
-          <p className="text-xl mb-8 opacity-90">
+      <div className="py-12 md:py-16 text-center px-2 sm:px-0">
+        <Card className="bg-gradient-to-r from-orange-500 to-red-500 text-white dark:from-orange-600 dark:to-red-700">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ready to get started?</h2>
+          <p className="text-lg sm:text-xl mb-8 opacity-90">
             Join thousands of home cooks who are already organizing their recipes with us.
           </p>
           {user ? (
@@ -187,7 +187,7 @@ const Home = () => {
       </div>
 
       {/* Footer */}
-      <div className="py-8 text-center text-gray-500 border-t border-gray-200">
+      <div className="py-6 md:py-8 text-center text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700 text-sm">
         <p>&copy; 2024 Digital Recipe Book. Made with ❤️ for home cooks everywhere.</p>
       </div>
     </PageContainer>

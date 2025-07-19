@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { db } from '../firebase/config';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
+import PageContainer from '../components/PageContainer';
 
 const RecipesPage = () => {
   const location = useLocation();
@@ -89,7 +90,7 @@ const RecipesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fdf7f4] py-10 px-4 sm:px-8">
+    <PageContainer>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold mb-2">Discover Recipes</h1>
@@ -195,7 +196,7 @@ const RecipesPage = () => {
           </>
         )}
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

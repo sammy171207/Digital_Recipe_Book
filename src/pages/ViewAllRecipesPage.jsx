@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { db } from '../firebase/config';
 import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
+import PageContainer from '../components/PageContainer';
 
 const ViewAllRecipesPage = () => {
   const user = useSelector((state) => state.auth.user);
@@ -95,7 +96,7 @@ const ViewAllRecipesPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#fdf7f4] py-10 px-4 sm:px-8">
+    <PageContainer>
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <div>
@@ -215,7 +216,7 @@ const ViewAllRecipesPage = () => {
           </>
         )}
       </div>
-    </div>
+    </PageContainer>
   );
 };
 
