@@ -58,17 +58,17 @@ const RecipeSuggestions = () => {
   const getSuggestionIcon = (type) => {
     switch (type) {
       case 'ai_generated':
-        return <FaBrain className="text-purple-500" />;
+        return <FaBrain className="text-orange-500" />;
       case 'category':
         return <FaUtensils className="text-orange-500" />;
       case 'ingredient':
-        return <FaStar className="text-yellow-500" />;
+        return <FaStar className="text-orange-500" />;
       case 'seasonal':
-        return <FaLightbulb className="text-green-500" />;
+        return <FaLightbulb className="text-orange-500" />;
       case 'basic':
-        return <FaMagic className="text-blue-500" />;
+        return <FaMagic className="text-orange-500" />;
       default:
-        return <FaLightbulb className="text-blue-500" />;
+        return <FaLightbulb className="text-orange-500" />;
     }
   };
 
@@ -119,11 +119,11 @@ const RecipeSuggestions = () => {
     return (
       <div className="bg-white rounded-lg shadow-md p-6">
         <div className="flex items-center space-x-2 mb-4">
-          <FaBrain className="h-5 w-5 text-purple-500" />
+          <FaBrain className="h-5 w-5 text-orange-500" />
           <h3 className="text-lg font-semibold text-gray-800">AI Recipe Suggestions</h3>
         </div>
         <div className="flex items-center justify-center space-x-2 py-8">
-          <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-purple-500"></div>
+          <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-orange-500"></div>
           <span className="text-gray-600">AI is thinking...</span>
         </div>
       </div>
@@ -134,14 +134,14 @@ const RecipeSuggestions = () => {
     return (
       <div className="bg-white rounded-lg shadow-md p-6">
         <div className="flex items-center space-x-2 mb-4">
-          <FaBrain className="h-5 w-5 text-purple-500" />
+          <FaBrain className="h-5 w-5 text-orange-500" />
           <h3 className="text-lg font-semibold text-gray-800">AI Recipe Suggestions</h3>
         </div>
         <div className="text-center text-red-600">
           <p>Unable to load AI suggestions</p>
           <button 
             onClick={() => dispatch(fetchRecipeSuggestions())}
-            className="mt-2 text-purple-600 hover:text-purple-700 underline"
+            className="mt-2 text-orange-600 hover:text-orange-700 underline"
           >
             Try again
           </button>
@@ -154,7 +154,7 @@ const RecipeSuggestions = () => {
     return (
       <div className="bg-white rounded-lg shadow-md p-6">
         <div className="flex items-center space-x-2 mb-4">
-          <FaBrain className="h-5 w-5 text-purple-500" />
+          <FaBrain className="h-5 w-5 text-orange-500" />
           <h3 className="text-lg font-semibold text-gray-800">AI Recipe Suggestions</h3>
         </div>
         <div className="text-center text-gray-600">
@@ -169,7 +169,7 @@ const RecipeSuggestions = () => {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center space-x-2 mb-4">
-        <FaBrain className="h-5 w-5 text-purple-500" />
+        <FaBrain className="h-5 w-5 text-orange-500" />
         <h3 className="text-lg font-semibold text-gray-800">AI Recipe Suggestions</h3>
       </div>
       
@@ -178,7 +178,7 @@ const RecipeSuggestions = () => {
           <div
             key={suggestion.id}
             onClick={() => handleSuggestionClick(suggestion)}
-            className="border border-gray-200 rounded-lg p-4 hover:border-purple-300 hover:shadow-md transition-all duration-200 cursor-pointer group"
+            className="border border-gray-200 rounded-lg p-4 hover:border-orange-300 hover:shadow-md transition-all duration-200 cursor-pointer group"
           >
             <div className="flex items-start space-x-3">
               <div className="flex-shrink-0 mt-1">
@@ -187,11 +187,11 @@ const RecipeSuggestions = () => {
               
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between mb-2">
-                  <h4 className="text-sm font-medium text-gray-900 group-hover:text-purple-600 transition-colors line-clamp-2">
+                  <h4 className="text-sm font-medium text-gray-900 group-hover:text-orange-600 transition-colors line-clamp-2">
                     {suggestion.title}
                   </h4>
                   {suggestion.type === 'ai_generated' && (
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">
+                    <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full">
                       AI
                     </span>
                   )}
@@ -205,8 +205,8 @@ const RecipeSuggestions = () => {
                 {suggestion.type === 'ai_generated' && (
                   <div className="space-y-2 mb-3">
                     {suggestion.reasoning && (
-                      <p className="text-xs text-purple-600 bg-purple-50 p-2 rounded">
-                        💡 {suggestion.reasoning}
+                      <p className="text-xs text-orange-600 bg-orange-50 p-2 rounded">
+                        �� {suggestion.reasoning}
                       </p>
                     )}
                     

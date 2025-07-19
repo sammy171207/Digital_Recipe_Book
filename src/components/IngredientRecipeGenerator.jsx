@@ -85,12 +85,12 @@ const IngredientRecipeGenerator = () => {
     <div className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-2">
-          <FaBrain className="h-5 w-5 text-purple-500" />
+          <FaBrain className="h-5 w-5 text-orange-500" />
           <h3 className="text-lg font-semibold text-gray-800">AI Recipe Generator</h3>
         </div>
         <button
           onClick={() => setShowGenerator(!showGenerator)}
-          className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+          className="text-orange-600 hover:text-orange-700 text-sm font-medium"
         >
           {showGenerator ? 'Hide' : 'Show'} Generator
         </button>
@@ -115,7 +115,7 @@ const IngredientRecipeGenerator = () => {
                     value={ingredient}
                     onChange={(e) => updateIngredient(index, e.target.value)}
                     placeholder="e.g., chicken, rice, tomatoes..."
-                    className="flex-1 rounded-md border border-gray-300 p-2 text-sm focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                    className="flex-1 rounded-md border border-gray-300 p-2 text-sm focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                   />
                   {ingredients.length > 1 && (
                     <button
@@ -129,7 +129,7 @@ const IngredientRecipeGenerator = () => {
               ))}
               <button
                 onClick={addIngredient}
-                className="flex items-center space-x-2 text-purple-600 hover:text-purple-700 text-sm font-medium"
+                className="flex items-center space-x-2 text-orange-600 hover:text-orange-700 text-sm font-medium"
               >
                 <FaPlus className="h-3 w-3" />
                 <span>Add Ingredient</span>
@@ -141,7 +141,7 @@ const IngredientRecipeGenerator = () => {
           <button
             onClick={handleGenerateRecipe}
             disabled={generatedRecipeLoading}
-            className="w-full flex items-center justify-center space-x-2 bg-purple-500 hover:bg-purple-600 text-white px-4 py-3 rounded-lg font-medium transition disabled:opacity-50"
+            className="w-full flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-lg font-medium transition disabled:opacity-50"
           >
             {generatedRecipeLoading ? (
               <>
@@ -165,10 +165,10 @@ const IngredientRecipeGenerator = () => {
 
           {/* Generated Recipe Display */}
           {generatedRecipe && (
-            <div className="border border-purple-200 rounded-lg p-4 bg-purple-50">
+            <div className="border border-orange-200 rounded-lg p-4 bg-orange-50">
               <div className="flex items-start justify-between mb-3">
                 <h4 className="font-semibold text-gray-800">{generatedRecipe.title}</h4>
-                <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">
+                <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full">
                   AI Generated
                 </span>
               </div>
@@ -213,7 +213,7 @@ const IngredientRecipeGenerator = () => {
                   <ol className="text-sm text-gray-600 space-y-2">
                     {generatedRecipe.instructions.map((instruction, index) => (
                       <li key={index} className="flex items-start space-x-2">
-                        <span className="text-purple-500 font-medium text-xs mt-1">{index + 1}.</span>
+                        <span className="text-orange-500 font-medium text-xs mt-1">{index + 1}.</span>
                         <span>{instruction}</span>
                       </li>
                     ))}
@@ -225,7 +225,7 @@ const IngredientRecipeGenerator = () => {
               <div className="flex space-x-3">
                 <button
                   onClick={handleUseGeneratedRecipe}
-                  className="flex-1 flex items-center justify-center space-x-2 bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+                  className="flex-1 flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
                 >
                   <FaSave className="h-4 w-4" />
                   <span>Use This Recipe</span>

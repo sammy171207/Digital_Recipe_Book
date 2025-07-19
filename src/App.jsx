@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './pages/Home'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import DashboardPage from './pages/DashboardPage'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
@@ -24,6 +24,7 @@ function App() {
       <Navbar/>
       <UnsavedChangesWarning />
       <Routes>
+        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path='/home' element={<Home />} />
         <Route path='/dashboard' element={<DashboardPage/>}/>
         <Route path='/login' element={<LoginPage/>}/>
