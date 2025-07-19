@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* Custom theme styles */
+body {
+  background-color: #f3f4f6; /* light bg */
+  color: #1f2937; /* gray-800 */
+  transition: background 0.3s, color 0.3s;
+}
+
+html.dark body {
+  background-color: #111827; /* dark bg */
+  color: #f3f4f6; /* light text */
+}
+
+.navbar {
+  background-color: #fff;
+  color: #1f2937;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.03);
+}
+html.dark .navbar {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+/* Card style for forms and dashboard */
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06);
+  padding: 2rem;
+  border: 1px solid #f3f4f6;
+}
+html.dark .card {
+  background: #181f2a;
+  border: 1px solid #232b3a;
+}
+
+/* Input style */
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid #e5e7eb;
+  background: #fafafa;
+  color: #1f2937;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border 0.2s, background 0.2s;
+}
+.input:focus {
+  border-color: #ef4444;
+  outline: none;
+}
+html.dark .input {
+  background: #232b3a;
+  color: #f3f4f6;
+  border: 1.5px solid #232b3a;
+}
+
+/* Button style */
+.btn-main {
+  width: 100%;
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(239,68,68,0.08);
+}
+.btn-main:hover {
+  background: #dc2626;
+}
+
+/* Heading style */
+.heading-main {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+html.dark .heading-main {
+  color: #f3f4f6;
+}
+
+/* Subtle link style */
+.link-subtle {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+.link-subtle:hover {
+  color: #ef4444;
+}
+
+/* Example for links and buttons */
+.navbar a, .navbar button {
+  color: inherit;
+}
