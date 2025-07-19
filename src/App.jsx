@@ -14,27 +14,30 @@ import MealPlanPage from './pages/MealPlanPage';
 import ViewAllRecipesPage from './pages/ViewAllRecipesPage';
 import RecipesPage from './pages/RecipesPage'
 import RecipeDetailPage from './pages/RecipeDetailPage'
-
+import AddGroceryPage from './pages/AddGroceryPage';
+import ViewGroceryListPage from './pages/ViewGroceryListPage';
+import UnsavedChangesWarning from './components/UnsavedChangesWarning'
 
 function App() {
-
-
   return (  
-  <div className='container grid '>
-  <Navbar/>
-   <Routes>
-    <Route path='/home' element={<Home />} />
-    <Route path='/dashboard' element={<DashboardPage/>}/>
-    <Route path='/login' element={<LoginPage/>}/>
-    <Route path='/signup' element={<SignupPage/>}/>
-    <Route path='/profile' element={<ProfilePage/>}/>
-    <Route path='/add-recipe' element={<AddRecipePage/>}/>
-    <Route path='/meal-plan' element={<MealPlanPage/>}/>
-    <Route path='/my-recipes' element={<ViewAllRecipesPage/>}/>
-    <Route path='/recipes' element={<RecipesPage/>}/>
-    <Route path='/recipe/:id' element={<RecipeDetailPage/>}/>
-   </Routes>
-   </div>
+    <div className='container grid '>
+      <Navbar/>
+      <UnsavedChangesWarning />
+      <Routes>
+        <Route path='/home' element={<Home />} />
+        <Route path='/dashboard' element={<DashboardPage/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/signup' element={<SignupPage/>}/>
+        <Route path='/profile' element={<ProfilePage/>}/>
+        <Route path='/add-recipe' element={<AddRecipePage/>}/>
+        <Route path='/meal-plan' element={<MealPlanPage/>}/>
+        <Route path='/my-recipes' element={<ViewAllRecipesPage/>}/>
+        <Route path='/recipes' element={<RecipesPage/>}/>
+        <Route path='/recipe/:id' element={<RecipeDetailPage/>}/>
+        <Route path='/add-grocery' element={<AddGroceryPage/>}/>
+        <Route path='/grocery-lists' element={<ViewGroceryListPage/>}/>
+      </Routes>
+    </div>
   )
 }
 
